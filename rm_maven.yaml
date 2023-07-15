@@ -1,0 +1,7 @@
+- hosts: projectA
+  become: true
+  tasks:
+   - name: Delete the latest version of maven
+     ansible.builtin.yum:
+       name: maven
+       state: absent
