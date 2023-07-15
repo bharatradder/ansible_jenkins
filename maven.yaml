@@ -1,0 +1,7 @@
+- hosts: projectA
+  become: true
+  tasks:
+   - name: Install the latest version of maven
+     ansible.builtin.yum:
+       name: maven
+       state: latest
