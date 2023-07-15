@@ -1,0 +1,7 @@
+- hosts: projectC
+  become: true
+  tasks:
+   - name: Install the latest version of httpd
+     ansible.builtin.yum:
+       name: httpd
+       state: latest
